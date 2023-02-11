@@ -1,0 +1,157 @@
+figure {
+    text-align: center;
+}
+
+.promoPicture {
+    position: absolute;
+    left: 40%;
+    border: 3px solid #562F96;
+    background-color: black;
+    width: 827px;
+    height: 506px;
+    border-radius: 21px;
+}
+
+.promoPicture img {
+    width: auto;
+    height: auto;
+    max-width: 820px;
+    max-height: 500px;
+}
+
+h1 {
+    width: 600px;
+    margin-top: 150px;
+    font-family: sans-serif;
+    position: relative;
+    left: 20%;
+    font-size: 75px;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+
+#getYours {
+    left: 19%;
+    padding: 10px 10px 10px 10px;
+    position: relative;
+    font-family: sans-serif;
+    font-size: 36px;
+    color: #6C6C6C;
+}
+
+#getYours>a {
+    border: solid 1px #562F96;
+    text-decoration: none;
+    color: #6C6C6C;
+    padding: 10px 40px 10px 10px;
+}
+
+#ticket {
+    height: 32px;
+    position: relative;
+    top: 4px;
+}
+
+#newsSlide {
+    position: absolute;
+    height: 580px;
+    right: 0%;
+}
+
+#indexMerch a {
+    color: #6C6C6C;
+    font-family: sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+#indexMerch ul {
+    list-style-type: none;
+}
+
+#indexMerch li {
+    margin-left: 50px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+#indexMerch img {
+    height: 380px;
+}
+
+@media only screen and (max-width: 1350px) {
+
+    figure {
+        width: 100%;
+        text-align: center;
+    }
+
+    .promoPicture {
+        top: 150px;
+        margin: 0 auto;
+        border: 3px solid #562F96;
+        background-color: black;
+        height: 60%;
+        width: 40%;
+        border-radius: 21px;
+    }
+
+    .promoPicture img {
+        margin-top: 30%;
+        margin-bottom: 30%;
+        width: 90%;
+        max-width: 400px;
+    }
+
+    
+    section {
+        width: 100%;
+        text-align: center;
+    }
+
+    h1 {
+        top: 300px;
+        text-align: center;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: sans-serif;
+        font-size: 36px;
+        color: white;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+
+    #getYours {
+        top: 450px;
+        left: 30%;
+        padding: 10px 10px 10px 10px;
+        font-family: sans-serif;
+        font-size: 14px;
+        color: #6C6C6C;
+    }
+
+    #getYours>a {
+        border: solid 1px #562F96;
+        text-decoration: none;
+        color: #6C6C6C;
+        padding: 10px 40px 10px 10px;
+    }
+
+    #ticket {
+        height: 21px;
+        position: relative;
+        top: 4px;
+    }
+
+    #newsSlide {
+        display: none;
+    }
+
+
+    #indexMerch{
+        display: none;
+    }
+
+
+}

@@ -1,0 +1,60 @@
+.tourPicture {
+    background-color: black;
+    width: 827px;
+    height: 506px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tourPicture #image {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 820px;
+    max-height: 500px;
+}
+
+.tourPicture h1 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -80px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 75px;
+    color: white;
+}
+
+table {
+	display: table;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+}
+
+table tr{
+	display: table-cell;
+}
+table tr td{
+	display: block;
+    
+}
+
+.tourTable {
+    font-size: 36px;
+    color:#6C6C6C;
+    font-family: sans-serif;
+    line-height: 200%;
+}
+
+
+.place td {
+    text-align: center;
+}
+
+.tickets td > a{
+    display: inline-block;
+    background-color: #562F96;
+    width: 100%;
+    color:white;
+    text-align: center;
+    text-decoration: none;
+}

@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+    background-image: url("jennieBG.png");
+    background-color: #cccccc;
+}
+
+ul{
+    list-style-type: none;
+}

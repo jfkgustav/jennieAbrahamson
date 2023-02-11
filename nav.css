@@ -1,0 +1,149 @@
+
+    header {
+        padding-left: 26px;
+        border-bottom: 1px solid #562F96;
+        background-color: white;
+    }
+
+    .logo {
+        padding-top: 12px;
+        margin-top: -1px;
+    }
+
+    .logo #image {
+        width: auto;
+        height: auto;
+        max-width: 230px;
+        max-height: 73px;
+    }
+
+    .navBar {
+        left: 30%;
+        margin-top: -1px;
+        background-color: white;
+        position: absolute;
+        top: 40px;
+        width: 100%;   
+    }
+
+    .navBar li {
+        display: inline;
+    }
+
+    .navBar a {
+        font-size: 40px;
+        font-family: sans-serif;
+        color: #6C6C6C;
+        top: 40px;
+        margin-left: 20px;
+        text-decoration: none;
+        text-align: center;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    
+    .apps {
+        float: right;
+        top: 50px;
+        right: 1%;
+        background-color: white;
+        position: absolute;
+    }
+
+
+    .apps img {
+        height: 28px;
+        width: 28px;
+        top: -10px;
+        left: -4px;
+    }
+
+    .language {
+        position: absolute;
+        top: -40px;
+        left: 1160px;
+    }
+
+    .language h2 {
+        font-size: 24px;
+        font-family: sans-serif;
+        color: #6C6C6C;
+        text-decoration: none;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .language img {
+        height: 15px;
+        width: 22px;
+        left: 0px;
+        right: -10px;
+        top: 0px;
+    }
+
+
+
+@media only screen and (max-width: 1350px) {
+  
+    .logo {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #562F96;
+        background-color: white;
+        position: absolute;
+        padding-top: 12px;
+        margin-top: -1px;
+    }
+
+    .logo #image {
+        width: auto;
+        height: auto;
+        max-width: 230px;
+        max-height: 73px;
+    }
+
+    .navBar {
+        margin-top: 50px;
+        background-color: white;
+        width: 100%;
+    }
+
+    .navBar li {
+        display: inline;
+    }
+
+    .navBar a {
+        font-size: 20px;
+        font-family: sans-serif;
+        color: #6C6C6C;
+        margin-left: 20px;
+        text-decoration: none;
+        text-align: center;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    
+    .apps{
+        display: none;
+    }
+
+    .language {
+        position: absolute;
+        top: -40px;
+        left: 1160px;
+    }
+
+    .language h2 {
+        font-size: 24px;
+        font-family: sans-serif;
+        color: #6C6C6C;
+        text-decoration: none;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .language img {
+        height: 15px;
+        width: 22px;
+        left: 0px;
+        right: -10px;
+        top: 0px;
+    }
+
+}
