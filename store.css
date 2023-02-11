@@ -3,7 +3,7 @@ a:any-link {
 }
 
 
-.grid-container > section {
+.grid-container > div {
     margin-left: -40px;
 }
 
@@ -14,6 +14,13 @@ a:any-link {
     border-right: solid 1px #562F96;
 }
 
+#basketCounter {
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-top: -72px;
+    margin-bottom: 36px;
+}
 
 .storeNav a {
     font-size: 20px;
@@ -23,6 +30,7 @@ a:any-link {
     
 .storeNav ul {
     list-style-type: none;
+    line-height: 400%;
 }
 
 .storeNav li {
@@ -32,14 +40,6 @@ a:any-link {
 
 #korg{
     width: 47px;
-}
-
-.storeNav p {
-    font-family: sans-serif;
-    font-size: 20px;
-    text-align: center;
-    margin-top: -30px;
-    margin-bottom: 36px;
 }
 
 #search{
