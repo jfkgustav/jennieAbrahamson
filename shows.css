@@ -30,12 +30,10 @@ table {
     width: 900px;
 }
 
-table tr{
-	display: table-cell;
-}
-table tr td{
-	display: block;
-    
+
+
+.tickets a:hover{
+    opacity: 0.7;
 }
 
 .tourTable {
@@ -46,14 +44,14 @@ table tr td{
 }
 
 
-.place td {
+td {
     text-align: center;
 }
 
-.tickets td > a{
+.tickets a{
     display: inline-block;
     background-color: #562F96;
-    width: 100%;
+    width: 120%;
     color:white;
     text-align: center;
     text-decoration: none;
