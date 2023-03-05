@@ -58,25 +58,28 @@
           <li id="basketCounter">0</li>
         </div>
 
-        <li><a href="store.html" id="search">Search Products <img src="zoom.png" id="zoom"
-              alt="magnifying glass">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <li id="searchItem">
+          <input type="text" id="searchBar" name="search" value="Search Products">
+          <a href="store.html"><img src="zoom.png" id="zoom"
+            alt="magnifying glass"></a>
         </li>
 
-        <li>.</li>
 
         <li><a href="store.html"> <u>EVERYTHING</u></a></li>
 
         <li>.</li>
 
-        <li><a href="store.html"> CLOTHES</a></li>
+        <li><button class="menuButton" id="clothes"> CLOTHES</button></li>
+        <li><a href="store.html" class="subMenu" id="clothesMenu"> Sweaters <br> T-Shirts <br> Shoes </a></li>
+        <li id="clothesDot">.</li>
 
-        <li>.</li>
+        <li> <button class="menuButton" id="record">RECORDS</button></li>
+        <li> <a href="store.html" class="subMenu" id="recordMenu"> Vinyl <br> CD <br> Cassette</a></li>
+        <li id="recordDot">.</li>
 
-        <li><a href="store.html"> RECORDS</a></li>
+        <li><button class="menuButton" id="misc">MISC</button></li>
+        <li class="subMenu" id="miscMenu">Towels <br> Candles <br> Soap</li>
 
-        <li>.</li>
-
-        <li><a href="store.html"> MISC</a></li>
       </ul>
 
     </div>
@@ -86,9 +89,10 @@
 
       <tr>
         <td>
-          <div id="product">
-            <img src="sweater.png" id="sweater" alt="Red sweatshirt">
-            <button onclick="increaseBasketNumber()">
+          <div class="product">
+            <img src="sweater.png" class="sweater" onmouseover="slideImages(0)" onmouseout="stopSlide(0)"
+              alt="Red sweatshirt">
+            <button onclick="increaseBasketNumber()" class="productButton">
               + Add to basket!
             </button>
           </div>
@@ -97,9 +101,9 @@
           </p>
         </td>
         <td>
-          <div id="product">
+          <div class="product">
             <img src="pinkLP.png" alt="Pink Vinyl Reverseries">
-            <button onclick="increaseBasketNumber()">
+            <button onclick="increaseBasketNumber()" class="productButton">
               + Add to basket!
             </button>
           </div>
@@ -108,9 +112,10 @@
           </p>
         </td>
         <td>
-          <div id="product">
-            <img src="sweater.png" id="sweater" alt="Red sweatshirt">
-            <button onclick="increaseBasketNumber()">
+          <div class="product">
+            <img src="sweater.png" class="sweater" onmouseover="slideImages(1)" onmouseout="stopSlide(1)"
+              alt="Red sweatshirt">
+            <button onclick="increaseBasketNumber()" class="productButton">
               + Add to basket!
             </button>
           </div>
@@ -120,9 +125,10 @@
 
         </td>
         <td>
-          <div id="product">
-            <img src="sweater.png" id="sweater" alt="Red sweatshirt">
-            <button onclick="increaseBasketNumber()">
+          <div class="product">
+            <img src="sweater.png" class="sweater" onmouseover="slideImages(2)" onmouseout="stopSlide(2)"
+              alt="Red sweatshirt">
+            <button onclick="increaseBasketNumber()" class="productButton">
               + Add to basket!
             </button>
           </div>
@@ -135,9 +141,10 @@
 
       <tr>
         <td>
-          <div id="product">
-            <img src="sweater.png" id="sweater" alt="Red sweatshirt">
-            <button onclick="increaseBasketNumber()">
+          <div class="product">
+            <img src="sweater.png" class="sweater" onmouseover="slideImages(3)" onmouseout="stopSlide(3)"
+              alt="Red sweatshirt">
+            <button onclick="increaseBasketNumber()" class="productButton">
               + Add to basket!
             </button>
           </div>
@@ -147,9 +154,9 @@
 
         </td>
         <td>
-          <div id="product">
+          <div class="product">
             <img src="blackLP.png" alt="Black Vinyl Reverseries">
-            <button onclick="increaseBasketNumber()">
+            <button onclick="increaseBasketNumber()" class="productButton">
               + Add to basket!
             </button>
           </div>
@@ -159,9 +166,10 @@
 
         </td>
         <td>
-          <div id="product">
-            <img src="sweater.png" id="sweater" alt="Red sweatshirt">
-            <button onclick="increaseBasketNumber()">
+          <div class="product">
+            <img src="sweater.png" class="sweater" onmouseover="slideImages(4)" onmouseout="stopSlide(4)"
+              alt="Red sweatshirt">
+            <button onclick="increaseBasketNumber()" class="productButton">
               + Add to basket!
             </button>
           </div>
@@ -171,9 +179,10 @@
 
         </td>
         <td>
-          <div id="product">
-            <img src="sweater.png" id="sweater" alt="Red sweatshirt">
-            <button onclick="increaseBasketNumber()">
+          <div class="product">
+            <img src="sweater.png" class="sweater" onmouseover="slideImages(5)" onmouseout="stopSlide(5)"
+              alt="Red sweatshirt">
+            <button onclick="increaseBasketNumber()" class="productButton">
               + Add to basket!
             </button>
           </div>
@@ -186,9 +195,10 @@
 
       <tr>
         <td>
-          <div id="product">
-            <img src="sweater.png" id="sweater" alt="Red sweatshirt">
-            <button onclick="increaseBasketNumber()">
+          <div class="product">
+            <img src="sweater.png" class="sweater" onmouseover="slideImages(6)" onmouseout="stopSlide(6)"
+              alt="Red sweatshirt">
+            <button onclick="increaseBasketNumber()" class="productButton">
               + Add to basket!
             </button>
           </div>
@@ -198,9 +208,10 @@
 
         </td>
         <td>
-          <div id="product">
-            <img src="sweater.png" id="sweater" alt="Red sweatshirt">
-            <button onclick="increaseBasketNumber()">
+          <div class="product">
+            <img src="sweater.png" class="sweater" onmouseover="slideImages(7)" onmouseout="stopSlide(7)"
+              alt="Red sweatshirt">
+            <button onclick="increaseBasketNumber()" class="productButton">
               + Add to basket!
             </button>
           </div>
@@ -211,9 +222,10 @@
 
         </td>
         <td>
-          <div id="product">
-            <img src="sweater.png" id="sweater" alt="Red sweatshirt">
-            <button onclick="increaseBasketNumber()">
+          <div class="product">
+            <img src="sweater.png" class="sweater" onmouseover="slideImages(8)" onmouseout="stopSlide(8)"
+              alt="Red sweatshirt">
+            <button onclick="increaseBasketNumber()" class="productButton">
               + Add to basket!
             </button>
           </div>
@@ -224,9 +236,10 @@
 
         </td>
         <td>
-          <div id="product">
-            <img src="sweater.png" id="sweater" alt="Red sweatshirt">
-            <button onclick="increaseBasketNumber()">
+          <div class="product">
+            <img src="sweater.png" class="sweater" onmouseover="slideImages(9)" onmouseout="stopSlide(9)"
+              alt="Red sweatshirt">
+            <button onclick="increaseBasketNumber()" class="productButton">
               + Add to basket!
             </button>
           </div>
@@ -243,25 +256,5 @@
   </div>
 
 </body>
-
-<script>
-var productImage = document.getElementById('sweater');
-var timeout
-
-productImage.onmouseover = function (){   
-    timeout = setTimeout(() => { 
-        productImage.src="redsweat2.jpg";
-      }, 3000);
-    
-}
-
-productImage.onmouseleave = function(){
-        clearTimeout(timeout);
-        productImage.src="sweater.png";
-}
-
-
-
-</script>
 
 </html>

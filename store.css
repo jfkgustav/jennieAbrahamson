@@ -11,7 +11,7 @@ a:any-link {
     width: 319px;
     grid-row: 2;
     grid-column: 1 / 2;
-    border-right: solid 1px #562F96;
+    border-right: solid 2px #562F96;
 }
 
 
@@ -26,7 +26,7 @@ a:any-link {
     font-family: sans-serif;
     font-size: 20px;
     text-align: center;
-    margin-top: -72px;
+    margin-top: -71px;
     margin-bottom: 36px;
 }
 
@@ -44,6 +44,43 @@ a:any-link {
 .storeNav li {
     position: relative;
     text-align: center;
+    font-family: sans-serif;
+    color: #6C6C6C;   
+    font-size: 20px;
+}
+
+.subMenu {
+    font-size: 14px !important;
+    display: none;
+}
+
+.inactive{
+    display: none;
+}
+
+#searchBar {
+    width: 80%;
+    text-align: center;
+    font-family: sans-serif;
+    color: #6C6C6C;   
+    font-size: 20px;
+    border: none;
+    margin-right:-20px;
+}
+
+#searchItem{
+    margin-top: -20px;
+    height: 30px;
+    padding-bottom: 20px;
+    border-bottom: #562F96 1px solid;
+    margin-bottom: 30px;
+    
+}
+
+.active {
+
+    display:list-item !important;
+    text-align: center;
 }
 
 #korg {
@@ -56,8 +93,8 @@ a:any-link {
 }
 
 #zoom {
-    position: inherit;
-    top: 2.6px;
+    position: relative;
+    right:10px;
     width: 14px;
 }
 
@@ -81,7 +118,7 @@ a:any-link {
     position: relative;
 }
 
-#product{
+.product{
     position: relative;
     width: auto;
     height: 228px;
@@ -92,11 +129,11 @@ a:any-link {
     height: 228px;
 }
 
-#product:hover > img{
+.product:hover > img{
     opacity: 0.3;
 }
 
-#product button {
+.product button {
     position: absolute;
     bottom:0%;
     width: 85%;
@@ -112,7 +149,16 @@ a:any-link {
     border-top: 10%;
 }
 
-#product:hover > button{
+.storeNav button {
+    background-color: white;
+    color: #6C6C6C;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.product:hover > button{
     opacity: 1;
 }
 

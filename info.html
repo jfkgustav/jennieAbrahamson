@@ -123,18 +123,43 @@
 
 
 
-    <form action="index.html" id="contact">
+    <form id="contact">
         <h2>Get in touch with us!</h2>
         <label for="name">Your name:</label><br>
         <input type="text" id="name" name="fname" value=""><br><br>
-        <label for="email">Your Email:</label><br>
-        <input type="text" id="email" name="lname" value=""><br><br>
-        <label for="email">Your Message:</label><br>
+        <label for="email" id="mejl">Your Email:</label><br>
+        <input type="text" id="email" name="email" value=""><br><br>
+        <label for="msg" id="msg">Your Message:</label><br>
         <textarea name="message" rows="10" cols="30"></textarea> <br> <br>
-        <input type="submit" value="Submit">
+        <input type="submit" onclick="mejlPlease()" value="Submit">
     </form>
 
 
 </body>
+
+<script>
+
+    var mejl = document.getElementById('email');
+
+    let counter = 0;
+
+    mejl.addEventListener("blur", mejlPlease)
+
+    function mejlPlease() {
+        if (mejl.value == "" && !counter){
+            ++counter;
+            document.getElementById('mejl').innerHTML += "<br> Warning: No Email address entered!"
+            }
+        if (mejl.value != "" || !counter) {
+            counter = 0;
+            document.getElementById('mejl').innerHTML = "Your Email"
+        }
+    }
+
+
+
+
+</script>
+
 
 </html>
