@@ -1,11 +1,10 @@
 
 html, body {
-    margin: 0 0 0 0;
+    margin-top: 0;
+    margin-right: 20px;
     background-image: url("jennieBG.png");
     background-color: #cccccc;
-    overflow-x: hidden; 
 }
-
 
 ul{
     list-style-type: none;

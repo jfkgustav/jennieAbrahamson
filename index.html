@@ -20,27 +20,30 @@
   <meta name="description" content="Jennie Abrahamsonäs Website Home Page">
   <meta name="keywords" content="Jennie, Abrahamson, Jennie Abrahamson, Home">
   <meta name="author" content="Gustav Johansson">
-  <meta name="viewport" content="width=1885px, initial-scale=0.6">
 </head>
 
 <body>
+
   <header>
 
     <div class="logo">
       <a href="index.html"><img src="jennieLOGO.png" alt="Jennie Abrahamson Logo"></a>
     </div>
 
-    <ul class="navBar">
-      <li class="language">
-        <h2> ENGLISH <img src="uk-flag.png" alt="English flag"></h2>
-      </li>
-      <li><a href="index.html"><u>HOME</u></a></li>
-      <li><a href="shows.html">SHOWS</a></li>
-      <li><a href="store.html">STORE</a></li>
-      <li><a href="news.html">NEWS</a></li>
-      <li><a href="info.html">INFO</a></li>
-    </ul>
+    <div class="navContainer">
+      <ul class="navBar">
+        <li><a href="index.html"><u>HOME</u></a></li>
+        <li><a href="shows.html">SHOWS</a></li>
+        <li><a href="store.html">STORE</a></li>
+        <li><a href="news.html">NEWS</a></li>
+        <li><a href="info.html">INFO</a></li>
+      </ul>
+    </div>
 
+
+    <div class="language">
+      <h2> ENGLISH <img src="uk-flag.png" alt="English flag"></h2>
+    </div>
 
     <div class="apps">
 
@@ -53,64 +56,67 @@
     </div>
   </header>
 
-  <figure class="promoPicture">
-    <a href="shows.html"><img src="jennieALONE.png" alt="Jennie Abrahamson Promo Picture"></a>
-  </figure>
+    <figure class="promoPicture">
+      <a href="shows.html"><img src="jennieALONE.png" alt="Jennie Abrahamson Promo Picture"></a>
+    </figure>
 
-  <h1>
-    SHOW TICKETS <br>
-    AVAILABLE
-    NOW!
-  </h1>
+    <h1>
+      SHOW TICKETS <br>
+      AVAILABLE
+      NOW!
+    </h1>
 
-  <h2 id="getYours">
-    <a href="shows.html">GET YOURS! <img src="ticket.png" id="ticket" alt="Ticket"></a>
-  </h2>
+    <h2 id="getYours">
+      <a href="shows.html">GET YOURS! <img src="ticket.png" id="ticket" alt="Ticket"></a>
+    </h2>
 
-  <div class="slideshow-container">
+    <div class="slideshow-container">
 
-    <div class="slides">
-      <img src="noshow.png" style="width:100%">
-      <div class="slideText">2 SHOWS CANCELLED <br>
-        We are sad to announce that the shows in Örebro next weekend is cancelled because of a sickness in the band. We
-        look forward seeing our fans in Örebro another time. Much love from Jennie and the band.</div>
-    </div>
-
-
-    <div class="slides">
-      <img src="dukommeraldrig.png" style="width:100%">
-      <div class="slideText">NEW SINGLE <br>
-        “Du kommer aldrig” is out!
-        The first single from the new album “Kärlek & Makt”.
+      <div class="slides">
+        <img src="noshow.png" style="width:100%">
+        <div class="slideText">2 SHOWS CANCELLED <br>
+          We are sad to announce that the shows in Örebro next weekend is cancelled because of a sickness in the band.
+          We
+          look forward seeing our fans in Örebro another time. Much love from Jennie and the band.</div>
       </div>
+
+
+      <div class="slides">
+        <img src="dukommeraldrig.png" style="width:100%">
+        <div class="slideText">NEW SINGLE <br>
+          “Du kommer aldrig” is out!
+          The first single from the new album “Kärlek & Makt”.
+        </div>
+      </div>
+
+
+      <div class="slides">
+        <img src="sweater.png" style="width:100%">
+        <div class="slideText">LOREM IPSUM <br>
+          Dolor sit amet, consectetur adipiscing elit. Suspendisse leo mauris, rhoncus quis consectetur quis, commodo
+          eget
+          justo. Proin porta turpis</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
 
-    <div class="slides">
-      <img src="sweater.png" style="width:100%">
-      <div class="slideText">LOREM IPSUM <br>
-        Dolor sit amet, consectetur adipiscing elit. Suspendisse leo mauris, rhoncus quis consectetur quis, commodo eget
-        justo. Proin porta turpis</div>
-    </div>
+    <ul id="indexMerch">
+      <li><a href="store.html"><img src="sweater.png" alt="Red sweatshirt">
+          <p>Red sweatshirt $40</p>
+        </a></li>
+      <li><a href="store.html"><img src="pinkLP.png" alt="Reverseries pink vinyl">
+          <p>Reverseries pink vinyl $20</p>
+        </a></li>
+      <li><a href="store.html"><img src="blackLP.png" alt="Reverseries black vinyl">
+          <p>Reverseries black vinyl $20</p>
+        </a></li>
+    </ul>
 
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
+    <script src="index.js" type="text/javascript"></script>
 
-
-  <ul id="indexMerch">
-    <li><a href="store.html"><img src="sweater.png" alt="Red sweatshirt">
-        <p>Red sweatshirt $40</p>
-      </a></li>
-    <li><a href="store.html"><img src="pinkLP.png" alt="Reverseries pink vinyl">
-        <p>Reverseries pink vinyl $20</p>
-      </a></li>
-    <li><a href="store.html"><img src="blackLP.png" alt="Reverseries black vinyl">
-        <p>Reverseries black vinyl $20</p>
-      </a></li>
-  </ul>
-
-  <script src="index.js" type="text/javascript"></script>
 
 </body>
 
