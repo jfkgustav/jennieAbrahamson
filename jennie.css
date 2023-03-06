@@ -1,11 +1,23 @@
-
-html, body {
+html,
+body {
     margin-top: 0;
     margin-right: 20px;
     background-image: url("jennieBG.png");
     background-color: #cccccc;
 }
 
-ul{
+
+@media only screen and (max-width: 1350px) {
+
+    html,
+    body {
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+
+ul {
     list-style-type: none;
 }

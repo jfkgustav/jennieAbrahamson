@@ -22,7 +22,6 @@
 
     .navContainer{
         box-sizing: border-box;
-;
     }
 
     .navBar {
@@ -91,38 +90,29 @@
 @media only screen and (max-width: 1350px) {
 
     header {
-        width: 100%;
+        margin: 0 auto;
     }
 
     .navContainer {
-        display: table;
         margin: 0 auto;
     }
 
     .logo {
-        width: 100%;
+        margin: 10px auto;
         text-align: center;
         border-bottom: 1px solid #562F96;
         background-color: white;
-        position: absolute;
-        margin-top: 10px;
-        
     }
 
     .logo img {
-        width: auto;
-        height: auto;
-        margin-left: -20px;
         max-width: 230px;
         max-height: 73px;
     }
 
     .navBar {
-        position: relative;
-        top:77px;
-        left:-40px;
+        margin-top: 0;
+        margin-left: -60px;
         text-align: center;
-        width: 500px;
     }
 
     .navBar li {
@@ -133,7 +123,8 @@
         font-size: 20px;
         font-family: sans-serif;
         color: #6C6C6C;
-        margin-left: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
         text-decoration: none;
         text-align: center;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
