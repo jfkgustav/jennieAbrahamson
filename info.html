@@ -22,9 +22,6 @@
         </div>
 
         <ul class="navBar">
-            <li class="language">
-                <h2> ENGLISH <img src="uk-flag.png" alt="English flag"></h2>
-            </li>
             <li><a href="index.html">HOME</a></li>
             <li><a href="shows.html">SHOWS</a></li>
             <li><a href="store.html">STORE</a></li>
@@ -32,9 +29,14 @@
             <li><a href="info.html"><u>INFO</u></a></li>
         </ul>
 
+        <div class="language">
+            <h2> ENGLISH <img src="uk-flag.png" alt="English flag"></h2>
+        </div>
+
         <div class="apps">
 
-            <a href="https://open.spotify.com/artist/6Q6y2vf2DZm7yLWHKQr7Bx"><img src=spotifyIcon.png alt="spotifyIcon"></a>
+            <a href="https://open.spotify.com/artist/6Q6y2vf2DZm7yLWHKQr7Bx"><img src=spotifyIcon.png
+                    alt="spotifyIcon"></a>
             <a href="https://www.instagram.com/jennieabrahamson/"><img src=instagram.png alt="instagram"></a>
             <a href="https://twitter.com/JennieAbrahams"><img src=twitter.png alt="twitter"></a>
             <a href="https://www.facebook.com/jennieabrahamsonmusic"><img src=facebook.png alt="facebook"></a>
@@ -146,10 +148,10 @@
     mejl.addEventListener("blur", mejlPlease)
 
     function mejlPlease() {
-        if (mejl.value == "" && !counter){
+        if (mejl.value == "" && !counter) {
             ++counter;
             document.getElementById('mejl').innerHTML += "<br> Warning: No Email address entered!"
-            }
+        }
         if (mejl.value != "" || !counter) {
             counter = 0;
             document.getElementById('mejl').innerHTML = "Your Email"
