@@ -174,31 +174,39 @@
     }
 
     h1 {
-        position: relative;
         text-align: center;
         font-family: sans-serif;
-        font-size: 36px;
+        font-size: 48px;
+        margin: 0 auto;
+        position: relative;
+        top: -200px;
         color: white;
         text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     }
 
     #getYours {
-        top: 450px;
-        left: 30%;
+        position: relative;
+        top: -190px;
+        left:80px;
+        margin: 0 auto;
         padding: 10px 10px 10px 10px;
         width: 400px;
         font-family: sans-serif;
-        font-size: 14px;
+        font-size: 24px;
         color: #6C6C6C;
     }
 
     #getYours>a {
         border: solid 1px #562F96;
+        border-radius: 12px;
         text-decoration: none;
-        color: #6C6C6C;
+        color: white;
         padding: 10px 40px 10px 10px;
     }
 
+    #getYours>a:hover{
+        background-color: #562F96;
+    }
 
     #ticket {
         height: 21px;
@@ -208,15 +216,15 @@
 
 
     .slideshow-container {
-        max-width: 30%;
+        max-width: 50%;
         position: relative;
-        top: 500px;
+        top: -50px;
         margin: auto;
     }
 
     .slideText {
         color: #f2f2f2;
-        font-size: 12px;
+        font-size: 24px;
         padding: 8px 12px;
         position: absolute;
         bottom: 8px;
@@ -229,9 +237,55 @@
     }
 
 
-    #indexMerch {
-        display: none;
+
+    
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
     }
 
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+
+    #indexMerch a {
+        color: #6C6C6C;
+        font-family: sans-serif;
+        font-size: 24px;
+        text-decoration: none;
+    }
+
+
+    #indexMerch li {
+        width: 33%;
+        vertical-align: top;
+        display: inline-block;
+    }
+
+    #indexMerch img {
+        height: 220px;
+    }
+
+    #indexMerch p {
+        width: 300px;
+    }
 
 }
