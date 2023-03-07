@@ -38,6 +38,7 @@
     #otherNews{
         left: auto;
         right: auto;
+        top: 0;
         margin: 0 auto;
     }
 
@@ -71,12 +72,7 @@
         top: 4px;
     }
 
-    #newsSlide {
-        position: absolute;
-        height: 580px;
-        right: 0%;
-    }
-
+ 
     #indexMerch a {
         color: #6C6C6C;
         font-family: sans-serif;
@@ -85,6 +81,8 @@
     }
 
     #indexMerch {
+        margin-top: -40px;
+        margin-bottom: 100px;
         padding: 20px 20px;
         width: 100%;
     }
@@ -191,8 +189,7 @@
     }
 
     #storeNews{
-        color:lightgray;
-        top:0;
+        top:-60px;
     }
 
     #getYours {
@@ -228,8 +225,14 @@
     }
 
 
+    #otherNews{
+        left: auto;
+        right: auto;
+        top: 0px;
+    }
+
     .slideshow-container {
-        max-width: 50%;
+        max-width: 70%;
         position: relative;
         margin: auto;
     }
@@ -277,7 +280,10 @@
         background-color: rgba(0, 0, 0, 0.8);
     }
 
-
+    #indexMerch {
+        margin-top:-40px;
+    }
+  
     #indexMerch a {
         color: #6C6C6C;
         font-family: sans-serif;

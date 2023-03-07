@@ -1,3 +1,25 @@
+@media print {
+    .navContainer{
+        display: none;
+    }
+
+    .navBar {
+        display: none;
+    }
+
+    .apps{
+        display: none;
+    }
+
+    .language {
+        display:none;
+    }
+
+    .logo img {
+        max-width: 150px;
+    }
+}
+
 @media only screen and (min-width: 1350px) {
 
     header {
@@ -144,3 +166,4 @@
 
 
 }
+
