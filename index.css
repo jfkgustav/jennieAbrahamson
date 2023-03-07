@@ -35,6 +35,11 @@
         text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     }
 
+    #otherNews{
+        left: auto;
+        right: auto;
+        margin: 0 auto;
+    }
 
     #getYours {
         top: -40px;
@@ -159,6 +164,7 @@
 @media only screen and (max-width: 1350px) {
 
     figure {
+        margin-top: 40px;
         text-align: center;
     }
 
@@ -169,14 +175,14 @@
     }
 
     .promoPicture img {
-        width: 50%;
+        width: 98%;
         height: auto;
     }
 
     h1 {
         text-align: center;
         font-family: sans-serif;
-        font-size: 48px;
+        font-size: 60px;
         margin: 0 auto;
         position: relative;
         top: -200px;
@@ -184,9 +190,14 @@
         text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     }
 
+    #storeNews{
+        color:lightgray;
+        top:0;
+    }
+
     #getYours {
         position: relative;
-        top: -190px;
+        top: -180px;
         left:80px;
         margin: 0 auto;
         padding: 10px 10px 10px 10px;
@@ -202,23 +213,24 @@
         text-decoration: none;
         color: white;
         padding: 10px 40px 10px 10px;
+        background-color: #562F96;
     }
 
     #getYours>a:hover{
-        background-color: #562F96;
+       background-color: white;
+       color:#562F96;
     }
 
     #ticket {
         height: 21px;
         position: relative;
-        top: 4px;
+        top: 2px;
     }
 
 
     .slideshow-container {
         max-width: 50%;
         position: relative;
-        top: -50px;
         margin: auto;
     }
 
