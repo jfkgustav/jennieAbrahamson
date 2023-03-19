@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 import spotifyIcon from '../lib/spotifyIcon.png'
 import instagram from '../lib/instagram.png'
@@ -21,11 +22,11 @@ class Nav extends React.Component {
 
                 <div class="navContainer">
                     <ul class="navBar">
-                        <li><a href="index.html"><u>HOME</u></a></li>
-                        <li><a href="shows.html">SHOWS</a></li>
-                        <li><a href="store.html">STORE</a></li>
-                        <li><a href="news.html">NEWS</a></li>
-                        <li><a href="info.html">INFO</a></li>
+                        <li><Link to="/index.html">HOME</Link></li>
+                        <li><Link to="/shows.html">SHOWS</Link></li>
+                        <li><Link to="/store.html">STORE</Link></li>
+                        <Link to="/news.html">NEWS</Link>
+                        <Link to="/info.html">INFO</Link>
                     </ul>
                 </div>
 

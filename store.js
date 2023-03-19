@@ -1,3 +1,6 @@
+import $ from 'jquery';
+
+
 $(document).ready(function () {
     $('.productButton').click(function () {
         $('#korg-container').effect("bounce", { distance: 10, times: 2 }, "fast")

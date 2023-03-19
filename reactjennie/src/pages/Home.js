@@ -1,4 +1,5 @@
 import React from "react";
+import {Helmet} from "react-helmet"
 
 import jennieAlone from '../lib/jennieALONE.png'
 import ticket from '../lib/ticket.png'
@@ -9,7 +10,9 @@ import duKommerAldrig from "../lib/dukommeraldrig.png"
 import noShow from "../lib/noshow.png"
 
 
+
 class Home extends React.Component {
+
     render() {
         return (
             <body>
@@ -75,9 +78,10 @@ class Home extends React.Component {
                     <button class="next" onclick="plusSlides(1)">&#10095;</button>
                 </div>
 
-
-                <script src="index.js" type="text/javascript"></script>
-
+                
+                <Helmet>
+                    <script src="index.js" type="text/jsx"></script>
+                </Helmet>
 
             </body>
         )
