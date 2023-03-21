@@ -1,4 +1,8 @@
- @media only screen and (max-width: 1350px) {
+.underline{
+  border-bottom: 1px solid #6C6C6C;
+}
+
+@media only screen and (max-width: 1350px) {
 
    html,
    body {

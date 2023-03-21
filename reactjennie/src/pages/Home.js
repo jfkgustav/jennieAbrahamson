@@ -77,7 +77,7 @@ class Home extends React.Component {
                     <li><a href="store.html"><img src={sweater} alt="Red sweatshirt" />
                         <p>Red sweatshirt $40</p>
                     </a></li>
-                    <li style={{ position: 'relative', left: '40px' }}><a href="store.html"><img src={pinkLP} alt="Reverseries pink vinyl" />
+                    <li style={{ position: 'relative', left: '-40px' }}><a href="store.html"><img src={pinkLP} alt="Reverseries pink vinyl" />
                         <p>Reverseries pink vinyl $20</p>
                     </a></li>
                     <li><a href="store.html"><img src={blackLP} alt="Reverseries black vinyl" />
