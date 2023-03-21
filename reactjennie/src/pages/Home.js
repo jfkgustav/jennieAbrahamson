@@ -1,5 +1,5 @@
-import React from "react";
-import {Helmet} from "react-helmet"
+import React, { useState, useEffect } from 'react';
+import { Helmet } from "react-helmet"
 
 import jennieAlone from '../lib/jennieALONE.png'
 import ticket from '../lib/ticket.png'
@@ -13,9 +13,50 @@ import noShow from "../lib/noshow.png"
 
 class Home extends React.Component {
 
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            slideIndex: 1
+        };
+    }
+
+    componentDidMount() {
+        this.showSlides(this.state.slideIndex);
+    }
+
+    componentDidUpdate() {
+
+        let slides = document.getElementsByClassName("slides");
+        this.showSlides(this.state.slideIndex);
+        console.log(slides)
+        console.log(this.state.slideIndex)
+    }
+
+
+
+
+
+    showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slides");
+        if (n > slides.length) { this.state.slideIndex = 1 }
+        if (n < 1) { this.state.slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        let o = this.state.slideIndex - 1;
+        slides[o].style.display = "block";
+    }
+
     render() {
         return (
             <body>
+
+                <Helmet>
+                    <script src="index.js" type="text/jsx"></script>
+                </Helmet>
+
                 <figure class="promoPicture">
                     <a href="shows.html"><img src={jennieAlone} alt="Jennie Abrahamson Promotion" /></a>
                 </figure>
@@ -74,14 +115,12 @@ class Home extends React.Component {
                             justo. Proin porta turpis</div>
                     </div>
 
-                    <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
-                    <button class="next" onclick="plusSlides(1)">&#10095;</button>
+                    <button class="prev" onClick={() => this.setState({ slideIndex: this.state.slideIndex - 1 })}>&#10094;</button>
+                    <button class="next" onClick={() => this.setState({ slideIndex: this.state.slideIndex + 1 })}>&#10095;</button>
                 </div>
 
-                
-                <Helmet>
-                    <script src="index.js" type="text/jsx"></script>
-                </Helmet>
+
+
 
             </body>
         )

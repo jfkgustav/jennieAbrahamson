@@ -32,10 +32,7 @@ var timeout
 var v = 0;
 var product = document.getElementsByClassName("sweater")
 
-/**
- * View another image of the product after 1.5s
- * @param {*} i selected product
- */
+
 function slideImages(i) {
     timeout = setInterval(changeImage, 1500, product, i);
 }

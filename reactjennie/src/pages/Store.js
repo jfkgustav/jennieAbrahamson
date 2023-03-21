@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 
 import jennieFront from '../lib/jennieFRONT.png'
 import ticket from '../lib/ticket.png'
 import sweater from '../lib/sweater.png'
 import pinkLP from '../lib/pinkLP.png'
 import blackLP from '../lib/blackLP.png'
+import sweater2 from '../lib/redsweat2.jpg'
 import duKommerAldrig from "../lib/dukommeraldrig.png"
 import noShow from "../lib/noshow.png"
 import kundkorg from "../lib/kundkorg.png"
@@ -13,68 +14,66 @@ import { Helmet } from "react-helmet";
 import $ from 'jquery';
 
 
+
 class Store extends React.Component {
-    componentDidMount() {
-        $(document).ready(function () {
-            $('.productButton').click(function () {
-                $('#korg-container').effect("bounce", { distance: 10, times: 2 }, "fast")
-            });
-
-            $(".menuButton").click(function () {
-                var ID = $(this).attr("id");
-                var menuID = "#" + $(this).attr("id").concat("Menu");
-                var dotID = "#" + this.id.concat("Dot");
-                $(menuID).toggleClass("active");
-                $(dotID).toggleClass("inactive");
-            });
-
-        });
-
-
-        function increaseBasketNumber() {
-            var basketCounter = document.getElementById('basketCounter');
-            var numberOfItems = basketCounter.innerHTML;
-
-            ++numberOfItems;
-            document.getElementById('basketCounter').innerHTML = numberOfItems;
-
-
-        }
-
-
-        var timeout
-        var v = 0;
-        var product = document.getElementsByClassName("sweater")
-
-
-        function slideImages(i) {
-            timeout = setInterval(changeImage, 1500, product, i);
-        }
-
-
-        function changeImage(product, i) {
-            v ^= 1;
-
-            if (v) {
-                product[i].src = "redsweat2.jpg";
-            }
-            else {
-                product[i].src = "sweater.png";
-            }
-        }
 
 
 
-
-        function stopSlide(i) {
-            clearTimeout(timeout);
-            product[i].src = "sweater.png";
-            v = 0;
-        }
-
-
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            count: 0,
+            timeout: 0,
+            value: 0,
+            product: document.getElementsByClassName("sweater")
+        };
+        this.changeImage = this.changeImage.bind(this);
     }
+
+    componentDidMount() {
+        document.getElementById('basketCounter').innerHTML = '0'
+    }
+
+
+    changeImage(product, i) {
+
+        var v = this.state.value;
+        v ^= 1;
+        this.setState({value: v})
+        if (v) {
+            product[i].src = sweater2;
+        }
+        else {
+            product[i].src = sweater;
+        }
+    }
+
+
+
+
+    stopSlide(i) {
+        var v = this.state.value;
+        var timeout = this.state.timeout;
+        var product = this.state.product;
+        clearTimeout(timeout);
+        product[i].src = sweater;
+        v = 0;
+    }
+
+
+    slideImages(i) {
+        var timeout = this.state.timeout;
+        timeout = setInterval(this.changeImage, 1500, this.state.product, i);
+        this.setState({timeout: timeout})
+    }
+
+    componentDidUpdate() {
+        var number = this.state.count
+        document.getElementById('basketCounter').innerHTML = number
+    }
+
+
+
     render() {
         return (
 
@@ -118,8 +117,8 @@ class Store extends React.Component {
                         <tr>
                             <td>
                                 <div class="product">
-                                    <img src={sweater} class="sweater" onmouseover="slideImages(0)" onmouseout="stopSlide(0)" alt="Red sweatshirt" />
-                                    <button onclick="increaseBasketNumber()" class="productButton">
+                                    <img src={sweater} class="sweater" onMouseOver={() => this.slideImages(0)} onMouseOut={() => this.stopSlide(0)} alt="Red sweatshirt"  />
+                                    <button onClick={() => this.setState({ count: this.state.count + 1 })} class="productButton">
                                         + Add to basket!
                                     </button>
                                 </div>
@@ -130,7 +129,7 @@ class Store extends React.Component {
                             <td>
                                 <div class="product">
                                     <img src={pinkLP} alt="Pink Vinyl Reverseries" />
-                                    <button onclick="increaseBasketNumber()" class="productButton">
+                                    <button onClick={() => this.setState({ count: this.state.count + 1 })} class="productButton">
                                         + Add to basket!
                                     </button>
                                 </div>
@@ -140,8 +139,8 @@ class Store extends React.Component {
                             </td>
                             <td>
                                 <div class="product">
-                                    <img src={sweater} class="sweater" onmouseover="slideImages(1)" onmouseout="stopSlide(1)" alt="Red sweatshirt" />
-                                    <button onclick="increaseBasketNumber()" class="productButton">
+                                    <img src={sweater} class="sweater" onMouseOver={() => this.slideImages(1)} onMouseOut={() => this.stopSlide(1)} alt="Red sweatshirt" />
+                                    <button onClick={() => this.setState({ count: this.state.count + 1 })} class="productButton">
                                         + Add to basket!
                                     </button>
                                 </div>
@@ -152,8 +151,8 @@ class Store extends React.Component {
                             </td>
                             <td>
                                 <div class="product">
-                                    <img src={sweater} class="sweater" onmouseover="slideImages(2)" onmouseout="stopSlide(2)" alt="Red sweatshirt" />
-                                    <button onclick="increaseBasketNumber()" class="productButton">
+                                    <img src={sweater} class="sweater" onMouseOver={() => this.slideImages(2)} onMouseOut={() => this.stopSlide(2)} alt="Red sweatshirt" />
+                                    <button onClick={() => this.setState({ count: this.state.count + 1 })} class="productButton">
                                         + Add to basket!
                                     </button>
                                 </div>
@@ -167,8 +166,8 @@ class Store extends React.Component {
                         <tr>
                             <td>
                                 <div class="product">
-                                    <img src={sweater} class="sweater" onmouseover="slideImages(3)" onmouseout="stopSlide(3)" alt="Red sweatshirt" />
-                                    <button onclick="increaseBasketNumber()" class="productButton">
+                                    <img src={sweater} class="sweater" onMouseOver={() => this.slideImages(3)} onMouseOut={() => this.stopSlide(3)} alt="Red sweatshirt" />
+                                    <button onClick={() => this.setState({ count: this.state.count + 1 })} class="productButton">
                                         + Add to basket!
                                     </button>
                                 </div>
@@ -180,7 +179,7 @@ class Store extends React.Component {
                             <td>
                                 <div class="product">
                                     <img src={blackLP} alt="Black Vinyl Reverseries" />
-                                    <button onclick="increaseBasketNumber()" class="productButton">
+                                    <button onClick={() => this.setState({ count: this.state.count + 1 })} class="productButton">
                                         + Add to basket!
                                     </button>
                                 </div>
@@ -191,8 +190,8 @@ class Store extends React.Component {
                             </td>
                             <td>
                                 <div class="product">
-                                    <img src={sweater} class="sweater" onmouseover="slideImages(4)" onmouseout="stopSlide(4)" alt="Red sweatshirt" />
-                                    <button onclick="increaseBasketNumber()" class="productButton">
+                                    <img src={sweater} class="sweater" onMouseOver={() => this.slideImages(4)} onMouseOut={() => this.stopSlide(4)} alt="Red sweatshirt" />
+                                    <button onClick={() => this.setState({ count: this.state.count + 1 })} class="productButton">
                                         + Add to basket!
                                     </button>
                                 </div>
@@ -203,8 +202,8 @@ class Store extends React.Component {
                             </td>
                             <td>
                                 <div class="product">
-                                    <img src={sweater} class="sweater" onmouseover="slideImages(5)" onmouseout="stopSlide(5)" alt="Red sweatshirt" />
-                                    <button onclick="increaseBasketNumber()" class="productButton">
+                                    <img src={sweater} class="sweater" onMouseOver={() => this.slideImages(5)} onMouseOut={() => this.stopSlide(5)} alt="Red sweatshirt" />
+                                    <button onClick={() => this.setState({ count: this.state.count + 1 })} class="productButton">
                                         + Add to basket!
                                     </button>
                                 </div>
@@ -218,8 +217,8 @@ class Store extends React.Component {
                         <tr>
                             <td>
                                 <div class="product">
-                                    <img src={sweater} class="sweater" onmouseover="slideImages(6)" onmouseout="stopSlide(6)" alt="Red sweatshirt" />
-                                    <button onclick="increaseBasketNumber()" class="productButton">
+                                    <img src={sweater} class="sweater" onMouseOver={() => this.slideImages(6)} onMouseOut={() => this.stopSlide(6)} alt="Red sweatshirt" />
+                                    <button onClick={() => this.setState({ count: this.state.count + 1 })} class="productButton">
                                         + Add to basket!
                                     </button>
                                 </div>
@@ -230,8 +229,8 @@ class Store extends React.Component {
                             </td>
                             <td>
                                 <div class="product">
-                                    <img src={sweater} class="sweater" onmouseover="slideImages(7)" onmouseout="stopSlide(7)" alt="Red sweatshirt" />
-                                    <button onclick="increaseBasketNumber()" class="productButton">
+                                    <img src={sweater} class="sweater" onMouseOver={() => this.slideImages(7)} onMouseOut={() => this.stopSlide(7)} alt="Red sweatshirt" />
+                                    <button onClick={() => this.setState({ count: this.state.count + 1 })} class="productButton">
                                         + Add to basket!
                                     </button>
                                 </div>
@@ -243,8 +242,8 @@ class Store extends React.Component {
                             </td>
                             <td>
                                 <div class="product">
-                                    <img src={sweater} class="sweater" onmouseover="slideImages(8)" onmouseout="stopSlide(8)" alt="Red sweatshirt" />
-                                    <button onclick="increaseBasketNumber()" class="productButton">
+                                    <img src={sweater} class="sweater" onMouseOver={() => this.slideImages(8)} onMouseOut={() => this.stopSlide(8)} alt="Red sweatshirt" />
+                                    <button onClick={() => this.setState({ count: this.state.count + 1 })} class="productButton">
                                         + Add to basket!
                                     </button>
                                 </div>
@@ -256,8 +255,8 @@ class Store extends React.Component {
                             </td>
                             <td>
                                 <div class="product">
-                                    <img src={sweater} class="sweater" onmouseover="slideImages(9)" onmouseout="stopSlide(9)" alt="Red sweatshirt" />
-                                    <button onclick="increaseBasketNumber()" class="productButton">
+                                    <img src={sweater} class="sweater" onMouseOver={() => this.slideImages(9)} onMouseOut={() => this.stopSlide(9)} alt="Red sweatshirt" />
+                                    <button onClick={() => this.setState({ count: this.state.count + 1 })} class="productButton">
                                         + Add to basket!
                                     </button>
                                 </div>

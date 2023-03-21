@@ -9,6 +9,7 @@ import duKommerAldrig from "../lib/dukommeraldrig.png"
 import noShow from "../lib/noshow.png"
 import kundkorg from "../lib/kundkorg.png"
 import zoom from "../lib/zoom.png"
+import film from "../lib/movie.mp4"
 
 
 
@@ -18,7 +19,7 @@ class Info extends React.Component {
             <body>
 
                 <video class="promoPicture" controls>
-                    <source src="movie.mp4" type="video/mp4" />
+                    <source src={film} type="video/mp4" />
                     <source src="movie.ogg" type="video/ogg" />
                     Your browser does not support the video tag.
                 </video>
