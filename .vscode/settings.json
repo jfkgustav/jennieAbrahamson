@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/b74b3aa5-9635-40f4-8667-e375851c4ea0/resourceGroups/appsvc_windows_centralus_basic/providers/Microsoft.Web/sites/jennieAbrahamson",
+    "appService.deploySubpath": "."
+}

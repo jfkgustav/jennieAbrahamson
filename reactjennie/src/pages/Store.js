@@ -1,18 +1,10 @@
-import React, { useState, useEffect } from 'react';
-
-import jennieFront from '../lib/jennieFRONT.png'
-import ticket from '../lib/ticket.png'
+import React from 'react';
 import sweater from '../lib/sweater.png'
 import pinkLP from '../lib/pinkLP.png'
 import blackLP from '../lib/blackLP.png'
 import sweater2 from '../lib/redsweat2.jpg'
-import duKommerAldrig from "../lib/dukommeraldrig.png"
-import noShow from "../lib/noshow.png"
 import kundkorg from "../lib/kundkorg.png"
 import zoom from "../lib/zoom.png"
-import { Helmet } from "react-helmet";
-import $ from 'jquery';
-
 
 
 class Store extends React.Component {
@@ -52,12 +44,10 @@ class Store extends React.Component {
 
 
     stopSlide(i) {
-        var v = this.state.value;
         var timeout = this.state.timeout;
         var product = this.state.product;
         clearTimeout(timeout);
         product[i].src = sweater;
-        v = 0;
     }
 
 

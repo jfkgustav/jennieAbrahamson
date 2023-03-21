@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { Helmet } from "react-helmet"
-
+import React from 'react';
 import jennieAlone from '../lib/jennieALONE.png'
 import ticket from '../lib/ticket.png'
 import sweater from '../lib/sweater.png'
@@ -26,11 +24,7 @@ class Home extends React.Component {
     }
 
     componentDidUpdate() {
-
-        let slides = document.getElementsByClassName("slides");
         this.showSlides(this.state.slideIndex);
-        console.log(slides)
-        console.log(this.state.slideIndex)
     }
 
 
@@ -40,23 +34,24 @@ class Home extends React.Component {
     showSlides(n) {
         let i;
         let slides = document.getElementsByClassName("slides");
-        if (n > slides.length) { this.state.slideIndex = 1 }
-        if (n < 1) { this.state.slideIndex = slides.length }
+        if (n > slides.length) {
+            this.setState({ slideIndex: 1 })
+            n = 1
+        }
+        if (n < 1) {
+            n = slides.length
+            this.setState({ slideIndex: 3 })
+        }
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
-        let o = this.state.slideIndex - 1;
+        let o = n - 1;
         slides[o].style.display = "block";
     }
 
     render() {
         return (
             <body>
-
-                <Helmet>
-                    <script src="index.js" type="text/jsx"></script>
-                </Helmet>
-
                 <figure class="promoPicture">
                     <a href="shows.html"><img src={jennieAlone} alt="Jennie Abrahamson Promotion" /></a>
                 </figure>

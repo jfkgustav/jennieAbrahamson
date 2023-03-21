@@ -1,13 +1,8 @@
 import React from "react";
-
-import jennieFront from '../lib/jennieFRONT.png'
 import ticket from '../lib/ticket.png'
 import sweater from '../lib/sweater.png'
-import pinkLP from '../lib/pinkLP.png'
-import blackLP from '../lib/blackLP.png'
 import duKommerAldrig from "../lib/dukommeraldrig.png"
 import noShow from "../lib/noshow.png"
-import kundkorg from "../lib/kundkorg.png"
 import zoom from "../lib/zoom.png"
 
 
